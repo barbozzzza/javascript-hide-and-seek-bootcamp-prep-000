@@ -11,15 +11,8 @@ function nestedTarget() {
 
 function deepestChild(){
 
- let node = document.getElementById('grand-node')
- let nextNode = node.children[0]
- while (nextNode) {
-   node = nextNode
-   nextNode = node.children[0]
- }
-
-  return node
-  
+  var node = document.querySelectorAll('#grand-node div');
+ return node[node.length - 1];
   
   
 }
